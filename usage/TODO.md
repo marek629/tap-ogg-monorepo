@@ -1,0 +1,1 @@
+ - [x] convert pretest script to bats test

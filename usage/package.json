@@ -1,0 +1,19 @@
+{
+  "name": "@tap-ogg/usage",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "merge": "tmerge -p 'ava test/massive.test.js --tap' -p 'ava test/skipping.test.js --tap'",
+    "nyan": "yarn merge | tap-ogg | tap-nyan",
+    "ogg": "ava test/massive.test.js --tap | tap-ogg --volume 36 --tap",
+    "pretest": "bats test/*.bats --timing --trace --print-output-on-failure",
+    "test": "yarn merge | tap-ogg --volume 30"
+  },
+  "type": "module",
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "5",
+    "bats": "^1.10.0",
+    "dirname-filename-esm": "^1.1.1"
+  }
+}

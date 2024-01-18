@@ -1,0 +1,13 @@
+[submodule "tap-merge"]
+	path = tap-merge
+	url = git@github.com:marek629/tap-merge.git
+[submodule "tap-nyan"]
+	path = tap-nyan
+	url = git@github.com:marek629/tap-nyan.git
+[submodule "tap-ogg"]
+	path = tap-ogg
+	url = git@github.com:marek629/tap-nyan-ogg.git
+[submodule "vorbis"]
+	path = vorbis
+	url = git@github.com:marek629/node-vorbis.git
+

@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "workspaces": [
+    "tap-merge",
+    "tap-nyan",
+    "tap-ogg",
+    "usage",
+    "vorbis"
+  ],
+  "scripts": {
+    "tap-merge": "yarn workspace @tap-ogg/tap-merge",
+    "tap-nyan": "yarn workspace @tap-ogg/tap-nyan",
+    "tap-ogg": "yarn workspace tap-ogg",
+    "usage": "yarn workspace @tap-ogg/usage",
+    "vorbis": "yarn workspace @tap-ogg/vorbis",
+    "wr": "yarn workspaces run",
+    "build": "concurrently -n merge,ogg 'yarn tap-merge build' 'yarn tap-ogg build'",
+    "test": "yarn wr test",
+    "test:unit": "concurrently -n merge,ogg 'yarn tap-merge test:unit' 'yarn tap-ogg test:unit'",
+    "test:integration": "concurrently -n merge,ogg 'yarn tap-merge test:integration' 'yarn tap-ogg test:integration'"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  },
+  "volta": {
+    "node": "20.11.0",
+    "yarn": "1.22.21"
+  }
+}
